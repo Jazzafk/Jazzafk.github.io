@@ -1,7 +1,9 @@
+alert('test')
+
 const constraints = window.constraints = {
   audio: false,
   video: true,
-  facingMode: {exact: 'user'}
+  facingMode: {exact: 'environment'}
 };
 
 function handleSuccess(stream) {
@@ -11,7 +13,7 @@ function handleSuccess(stream) {
   const video = document.getElementById('video');
   window.stream = stream;
   video.srcObject = stream;
-console.log(navigator.mediaDevices.enumerateDevices())
+//console.log(navigator.mediaDevices.enumerateDevices())
 }
 
 async function init(e) {
