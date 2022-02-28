@@ -1,7 +1,7 @@
 const constraints = window.constraints = {
   audio: false,
   video: true,
-  facingMode: {exact: 'environment'}
+  facingMode: {exact: 'user'}
 };
 
 function handleSuccess(stream) {
