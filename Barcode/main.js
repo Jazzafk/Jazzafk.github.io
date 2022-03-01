@@ -8,8 +8,9 @@ var videofeed = document.getElementById('video')
 if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
 
   navigator.mediaDevices.getUserMedia({video:{facingMode:{
-    exact: 'environment'
-  }}, audio:false})
+  exact: 'environment'
+  }}, 
+  audio:false})
   .then(function(stream){ 
     console.log(navigator.mediaDevices)
       videofeed.srcObject = stream});
