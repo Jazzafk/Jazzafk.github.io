@@ -24,5 +24,5 @@ async function init(e) {
   }
 }
 
-document.getElementById('showVideo').addEventListener('click', e => init(e));
+init(e)
 
