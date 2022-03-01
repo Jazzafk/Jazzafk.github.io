@@ -2,8 +2,7 @@ alert(navigator.mediaDevices.enumerateDevices())
 
 const constraints = window.constraints = {
   audio: false,
-  video: true,
-  facingMode:'environment',
+  video: {facingMode:'environment'}
 };
 
 function handleSuccess(stream) {
