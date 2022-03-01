@@ -15,14 +15,11 @@ function handleSuccess(stream) {
 //console.log(navigator.mediaDevices.enumerateDevices())
 }
 
-async function init(e) {
-  try {
+function init() {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
-  } catch (e) {
-    handleError(e);
-  }
-}
+  } 
 
-init(e)
+
+init()
 
