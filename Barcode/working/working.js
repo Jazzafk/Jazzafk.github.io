@@ -10,8 +10,6 @@ const constraints = window.constraints = {
 
 function handleSuccess(stream) {
 
-  
-
   const video = document.getElementById('video');
   window.stream = stream;
   video.srcObject = stream;
@@ -29,3 +27,27 @@ async function init(e) {
 
 document.getElementById('showVideo').addEventListener('click', e => init(e));
 
+var barcodeDetector = new BarcodeDetector({formats:['upc_a']})
+var list = []
+
+function render() {
+    barcodeDetector.detect(video).then((barcodes) => {
+        barcodes.forEach((barcode) => {
+        
+            list.push(barcode.rawValue)
+            console.log(list)
+            console.log(barcode.rawValue);
+            playBeep()
+
+        });
+      })
+  }
+
+  setInterval(function() {
+  render();
+}, 2000);
+
+var audioSorce = document.getElementById("barcodeBeep")
+function playBeep(){
+audioSorce.play()
+}
