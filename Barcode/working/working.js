@@ -1,9 +1,9 @@
-alert('test')
+alert('test1')
 
 const constraints = window.constraints = {
   audio: false,
   video: true,
-  facingMode: {exact: 'environment'}
+  facingMode:'environment',
 };
 
 function handleSuccess(stream) {
