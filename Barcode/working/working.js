@@ -9,9 +9,6 @@ const constraints = window.constraints = {
 };
 
 function handleSuccess(stream) {
-
-  
-
   const video = document.getElementById('video');
   window.stream = stream;
   video.srcObject = stream;
