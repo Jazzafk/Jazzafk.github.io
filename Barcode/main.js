@@ -25,6 +25,7 @@ function render() {
             list.push(barcode.rawValue)
             console.log(list)
             console.log(barcode.rawValue);
+            alert(barcode.rawValue);
             playBeep()
 
         });
