@@ -3,8 +3,8 @@
 const constraints = window.constraints = {
   audio: false,
   video: {facingMode: {
-      exact: 'environment'
-    }
+    exact: 'environment'
+  }
   }
 };
 
