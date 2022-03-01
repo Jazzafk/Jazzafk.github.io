@@ -1,4 +1,4 @@
-alert(navigator.mediaDevices.enumerateDevices())
+
 
 const constraints = window.constraints = {
   audio: false,
