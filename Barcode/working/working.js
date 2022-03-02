@@ -30,10 +30,9 @@ var list = []
 function render() {
     barcodeDetector.detect(video).then((barcodes) => {
         barcodes.forEach((barcode) => {
-        
+          console.log(barcode.rawValue);
             list.push(barcode.rawValue)
             console.log(list)
-            console.log(barcode.rawValue);
             alert(barcode.rawValue);
             //playBeep()
 
