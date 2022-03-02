@@ -2,10 +2,11 @@
 
 const constraints = window.constraints = {
   audio: false,
-  video: {facingMode: {
-    exact: 'environment'
-  }
-  }
+  video: true,
+  //{facingMode: {
+  //  exact: 'environment'
+ // }}
+  
 };
 
 function handleSuccess(stream) {
@@ -19,13 +20,11 @@ function handleSuccess(stream) {
 }
 
 async function init(e) {
-  try {
     const stream = await navigator.mediaDevices.getUserMedia(constraints);
     handleSuccess(stream);
-  } catch (e) {
-    handleError(e);
-  }
-}
+  } 
+   
+
 
 document.getElementById('showVideo').addEventListener('click', e => init(e));
 
