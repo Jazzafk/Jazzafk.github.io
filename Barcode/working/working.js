@@ -3,10 +3,9 @@ var videofeed = document.getElementById('video')
 
 const constraints = window.constraints = {
   audio: false,
-  video: true,
-  //{facingMode: {
-  //  exact: 'environment'
- // }}
+  video:{facingMode: {
+   exact: 'environment'
+ }}
 
 };
 
