@@ -1,3 +1,4 @@
+alert('functional')
 if (!('BarcodeDetector' in window)) { 
   alert('Barcode Error Browser not Compatible')
 }
